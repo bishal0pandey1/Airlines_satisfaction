@@ -13,7 +13,7 @@ dataset['Arrival Delay in Minutes']=dataset['Arrival Delay in Minutes'].fillna(d
 dataset.isnull().sum()
 
 #features removal
-dataset.drop(columns=['Unnamed: 0','id','Gender','Age','Departure Delay in Minutes','Arrival Delay in Minutes'],axis=1,inplace=True)
+dataset.drop(columns=['Unnamed: 0','id','Gender','Departure Delay in Minutes','Arrival Delay in Minutes'],axis=1,inplace=True)
 
 
 #encoding
@@ -41,7 +41,7 @@ x_train=scaler.fit_transform(x_train)
 dataset1=pd.read_csv(r'Data/test.csv')
 
 #dropping unnecessary columns
-dataset1.drop(columns=['Unnamed: 0','id','Age','Gender','Departure Delay in Minutes','Arrival Delay in Minutes'],axis=1,inplace=True)
+dataset1.drop(columns=['Unnamed: 0','id','Gender','Departure Delay in Minutes','Arrival Delay in Minutes'],axis=1,inplace=True)
 
 #encoding testing data
 dataset1['Customer Type']=le_Customer.fit_transform(dataset1['Customer Type'])

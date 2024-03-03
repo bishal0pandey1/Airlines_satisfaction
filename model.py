@@ -9,7 +9,6 @@ import joblib
 
 #data preprocessing
 dataset=pd.read_csv(r'Data/train.csv')
-dataset['Arrival Delay in Minutes']=dataset['Arrival Delay in Minutes'].fillna(dataset['Arrival Delay in Minutes'].median())
 dataset.isnull().sum()
 
 #features removal
